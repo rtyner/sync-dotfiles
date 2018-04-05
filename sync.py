@@ -33,16 +33,16 @@ zrc_local = hashlib.md5(open("/home/rusty/.zshrc",'rb').read()).hexdigest()
 zrc_remote = hashlib.md5(open("/home/rusty/projects/dotfiles/zsh/.zshrc",'rb').read()).hexdigest()
 
 if i3_local != i3_remote:
-    print("The files are different.")
+    copyfile("/home/rusty/.config/i3/config", "/home/rusty/projects/dotfiles/i3/config")
 if rofi_local != rofi_remote:
-    print("The files are different.")
+    copyfile("/home/rusty/.config/rofi/config", "/home/rusty/projects/dotfiles/rofi/config")
 if pb_local != pb_remote:
-    print("The files are different.")
+    copyfile("/home/rusty/.config/polybar/config", "/home/rusty/projects/dotfiles/polybar/config")
 if vrc_local != vrc_remote:
-    print("The files are different.")
+    copyfile("/home/rusty/.vimrc", "/home/rusty/projects/dotfiles/vim/.vimrc")
 if xrc_local != xrc_remote:
-    print("The files are different.")
+    copyfile("/home/rusty/.Xresources", "/home/rusty/projects/dotfiles/xresources/.Xresources")
 if xinit_local != xinit_remote:
-    print("The files are different.")
+    copyfile("/home/rusty/.xinitrc", "/home/rusty/projects/dotfiles/xresources/.xinitrc")
 if zrc_local != zrc_remote:
-    print("The files are different.")
+    copyfile("/home/rusty/.zshrc", "/home/rusty/projects/dotfiles/zsh/.zshrc")
